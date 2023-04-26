@@ -6,6 +6,13 @@
 nav img{
     width: 40px;
 }
+.fixed-top {
+    position: absolute !important;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
 .card-img-top{
     height: 60%;
 }
@@ -26,7 +33,20 @@ hr{
     color: grey;
 }
 
-.card{
+.card, form button{
     color: white !important;
     background-color: #0dcaf0 !important;
+}
+footer{
+    background-color: #0dcaf0;
+    color: white;
+
+}
+.favicon-footer i{
+    color: white;
+    font-size: 30px;
+    margin-right: 10px;
+}
+a:link, a:visited {
+    text-decoration: none;
 }
