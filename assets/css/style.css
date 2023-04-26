@@ -6,13 +6,16 @@
 nav img{
     width: 40px;
 }
+.card-img-top{
+    height: 60%;
+}
 
-main{
+.quienes-somos, .destacado{
     background-color: black;
     color: white;
 }
 
-main i {
+.quienes-somos i {
     background-color: #0dcaf0;
     font-size: 25px;
     padding: 5px;
@@ -21,4 +24,9 @@ main i {
 hr{
     width: 70%;
     color: grey;
+}
+
+.card{
+    color: white !important;
+    background-color: #0dcaf0 !important;
 }
