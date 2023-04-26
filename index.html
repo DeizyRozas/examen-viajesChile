@@ -12,13 +12,14 @@
     <meta name="keywords" content="viajes, tours, Chile, nacional" >
     <meta name="copyright" content="VIAJES CHILE SPA.">
     <link rel="shortcut icon" href="assets/img/viajes.svg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"> 
     <title>Viajes Chile</title>
 </head>
 <body>
     <!-- navbar debe estar con fixed-top para que se vea el fondo del carrusel, 
         pero con position absolute en el css para que no se mueva y no se confunda 
         con las demás secciones porque es transparente -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top  ">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top nav-pills ">
         <div class="container-fluid d-flex justify-content-around">
             <!-- link y logo empresa -->
             <a class="navbar-brand" href="#">
@@ -26,23 +27,27 @@
                 Viajes Chile
             </a>
             <!-- links a otras partes del sitio -->
-            <div>
+            <div >
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                            <a class="nav-link " aria-current="page" href="#">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Quiénes somos</a>
+                            <!-- cuando se aprieta el link de la seccion a la que se quiere ir, el scroll lleva directo a esa parte -->
+                            <a class="nav-link" href="#scrollspyHeading1">Quiénes somos</a>
+                            <!-- al hacer click en este link lleva directo al section quienes somos -->
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="#">Destacados</a>
+                            <a class="nav-link " href="#scrollspyHeading2">Destacados</a>
+                            <!-- al hacer click en este link lleva directo al section destacados -->
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="#">Contacto</a>
+                            <a class="nav-link " href="#scrollspyHeading3">Contacto</a>
+                            <!-- al hacer click en este link lleva directo al section contacto-->
                         </li>
                     </ul>
                 </div>
@@ -71,13 +76,14 @@
     <!-- info "Quienes somos" -->
 
     <main class="quienes-somos p-4">
-        <h1 class="text-center p-3" >¿QUÉNES SOMOS?</h1>
+        <h1 class="text-center p-3" id="scrollspyHeading1" >¿QUÉNES SOMOS?</h1>
         <hr class="mx-auto">
         <div class="row  col-md-10 mx-auto py-4">
             <div class="col-12 col-md-4 mb-3">
                 <i class="fa-solid fa-plane w-100 text-center mb-2"></i>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque nobis incidunt, quasi adipisci deserunt numquam amet reiciendis dicta possimus voluptatum labore commodi. Nisi architecto vel, unde pariatur modi sapiente id! Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur fugit quas eaque quam autem vel, blanditiis repellat quis praesentium, distinctio quisquam, iste nam laboriosam cum nesciunt! Voluptatibus, debitis quasi! Repellat.</p>
             </div>
+            <!-- en el hr d-block para que se muestre en pantallas pequeñas y d-sm-none para que no se muestre en pantallas medianas -->
             <hr class="mx-auto d-block d-sm-none">
             <div class="col-12 col-md-4  mb-3">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque nobis incidunt, quasi adipisci deserunt numquam amet reiciendis dicta possimus voluptatum labore commodi. Nisi architecto vel, unde pariatur modi sapiente id! Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, corporis ex tempora odit molestiae, quo magni illo, excepturi perspiciatis id delectus. Tempora dolore asperiores eveniet explicabo, deleniti necessitatibus suscipit itaque?</p>
@@ -93,7 +99,7 @@
     </main>
     <!-- seccion destacados -->
     <section class="destacado">
-        <h1 class="text-center p-3" >DESTACADOS</h1>
+        <h1 class="text-center p-3 "id="scrollspyHeading2" >DESTACADOS</h1>
         <hr class="mx-auto">
         <!-- cards destacados -->
         <div class="row row-cols-1 row-cols-md-4 g-4 col-md-10 mx-auto py-4">
@@ -137,7 +143,7 @@
     </section>
     <!-- seccion contacto -->
     <section class="contacto row justify-content-center">
-        <h1 class="text-center p-3" >CONTACTO</h1>
+        <h1 class="text-center p-3" id="scrollspyHeading3" >CONTACTO</h1>
         <hr class="mx-auto">
         <!-- formulario -->
         <form class="col-md-10 p-4">
@@ -153,7 +159,9 @@
                 <label for="mensaje" class="form-label">Mensaje</label>
                 <textarea name="mensaje" class="form-control" id="mensaje" rows="8"></textarea>
             </div>
-            <button type="submit" class="btn  ">Enviar</button>
+            
+            <!-- boton con tooltip -->
+            <button type="submit" class="btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Envía tu consulta con tus datos, responderemos! ">Enviar</button>
         </form>
     </section>
     <!-- footer -->
@@ -179,7 +187,8 @@
 
 
 
-    <script src="assets/js/script.js"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
