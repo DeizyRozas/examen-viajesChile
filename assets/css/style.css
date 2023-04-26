@@ -6,3 +6,19 @@
 nav img{
     width: 40px;
 }
+
+main{
+    background-color: black;
+    color: white;
+}
+
+main i {
+    background-color: #0dcaf0;
+    font-size: 25px;
+    padding: 5px;
+}
+
+hr{
+    width: 70%;
+    color: grey;
+}
